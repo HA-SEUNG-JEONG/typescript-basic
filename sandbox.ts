@@ -1,37 +1,51 @@
+//explicit types
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+
+// age = "30";
+age = 30;
+
+// isLoggedIn = 10;
+isLoggedIn = true;
+
 //arrays
-let names = ["luigi", "mario", "yoshi"];
 
-names.push("toad");
-// names.push(3);
-// names[0] = 3;
+// Type Error
+// let ninjas: string[];
 
-let numbers = [10, 20, 30, 40];
+// ninjas.push("shaun");
 
-numbers.push(25);
-// numbers.push("hi");
-// numbers[1] = "shaun";
+// 빈 배열 선언
+let ninjas: string[] = [];
 
-let mixed = ["ken", 4, "chun", 8, 9];
+ninjas.push("shaun");
 
-mixed.push("tyu");
-mixed.push(10);
-mixed[0] = 3;
+//union types
+let mixed: (string | number | boolean)[] = [];
+
+mixed.push("hello");
+mixed.push(2);
+mixed.push(true);
+console.log(mixed);
+
+let uid: string | number;
+
+uid = "123";
+uid = 2;
+// uid = true;
 
 //objects
-let ninja = {
-  name: "mario",
-  belt: "black",
-  age: 30,
+
+let ninjaOne: object;
+
+ninjaOne = { name: "yoshi", age: 30 };
+// ninjaOne = "hello";
+
+let ninjaTwo: {
+  name: string;
+  age: number;
+  beltColor: string;
 };
 
-ninja.age = 40;
-ninja.name = "tu";
-// ninja.age = "30";
-// ninja.skill = ["fighting"];
-
-ninja = {
-  name: "yoshi",
-  belt: "orange",
-  age: 40,
-  skills: [],
-};
+ninjaTwo = { name: "mario", age: 20, beltColor: "black" };

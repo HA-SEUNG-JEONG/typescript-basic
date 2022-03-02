@@ -1,29 +1,31 @@
+//explicit types
+var character;
+var age;
+var isLoggedIn;
+// age = "30";
+age = 30;
+// isLoggedIn = 10;
+isLoggedIn = true;
 //arrays
-var names = ["luigi", "mario", "yoshi"];
-names.push("toad");
-// names.push(3);
-// names[0] = 3;
-var numbers = [10, 20, 30, 40];
-numbers.push(25);
-// numbers.push("hi");
-// numbers[1] = "shaun";
-var mixed = ["ken", 4, "chun", 8, 9];
-mixed.push("tyu");
-mixed.push(10);
-mixed[0] = 3;
+// Type Error
+// let ninjas: string[];
+// ninjas.push("shaun");
+// 빈 배열 선언
+var ninjas = [];
+ninjas.push("shaun");
+//union types
+var mixed = [];
+mixed.push("hello");
+mixed.push(2);
+mixed.push(true);
+console.log(mixed);
+var uid;
+uid = "123";
+uid = 2;
+// uid = true;
 //objects
-var ninja = {
-    name: "mario",
-    belt: "black",
-    age: 30
-};
-ninja.age = 40;
-ninja.name = "tu";
-// ninja.age = "30";
-// ninja.skill = ["fighting"];
-ninja = {
-    name: "yoshi",
-    belt: "orange",
-    age: 40,
-    skills: []
-};
+var ninjaOne;
+ninjaOne = { name: "yoshi", age: 30 };
+// ninjaOne = "hello";
+var ninjaTwo;
+ninjaTwo = { name: "mario", age: 20, beltColor: "black" };
