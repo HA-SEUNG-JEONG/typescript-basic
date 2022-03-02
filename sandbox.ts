@@ -1,51 +1,21 @@
-//explicit types
-let character: string;
-let age: number;
-let isLoggedIn: boolean;
+let age: any = 25;
 
-// age = "30";
-age = 30;
+age = true;
+console.log(age);
 
-// isLoggedIn = 10;
-isLoggedIn = true;
+age = "hello";
+console.log(age);
 
-//arrays
+let mixed: any[] = [];
 
-// Type Error
-// let ninjas: string[];
-
-// ninjas.push("shaun");
-
-// 빈 배열 선언
-let ninjas: string[] = [];
-
-ninjas.push("shaun");
-
-//union types
-let mixed: (string | number | boolean)[] = [];
-
-mixed.push("hello");
-mixed.push(2);
-mixed.push(true);
+mixed.push(5);
+mixed.push("mario");
 console.log(mixed);
 
-let uid: string | number;
+let ninja: { name: any; age: any };
 
-uid = "123";
-uid = 2;
-// uid = true;
+ninja = { name: "yoshi", age: 26 };
+console.log(ninja);
 
-//objects
-
-let ninjaOne: object;
-
-ninjaOne = { name: "yoshi", age: 30 };
-// ninjaOne = "hello";
-
-let ninjaTwo: {
-  name: string;
-  age: number;
-  beltColor: string;
-};
-
-ninjaTwo = { name: "mario", age: 20, beltColor: "black" };
+ninja = { name: 25, age: "26" };
+console.log(ninja);

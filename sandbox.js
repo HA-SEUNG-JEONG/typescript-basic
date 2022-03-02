@@ -1,31 +1,14 @@
-//explicit types
-var character;
-var age;
-var isLoggedIn;
-// age = "30";
-age = 30;
-// isLoggedIn = 10;
-isLoggedIn = true;
-//arrays
-// Type Error
-// let ninjas: string[];
-// ninjas.push("shaun");
-// 빈 배열 선언
-var ninjas = [];
-ninjas.push("shaun");
-//union types
+var age = 25;
+age = true;
+console.log(age);
+age = "hello";
+console.log(age);
 var mixed = [];
-mixed.push("hello");
-mixed.push(2);
-mixed.push(true);
+mixed.push(5);
+mixed.push("mario");
 console.log(mixed);
-var uid;
-uid = "123";
-uid = 2;
-// uid = true;
-//objects
-var ninjaOne;
-ninjaOne = { name: "yoshi", age: 30 };
-// ninjaOne = "hello";
-var ninjaTwo;
-ninjaTwo = { name: "mario", age: 20, beltColor: "black" };
+var ninja;
+ninja = { name: "yoshi", age: 26 };
+console.log(ninja);
+ninja = { name: 25, age: "26" };
+console.log(ninja);
