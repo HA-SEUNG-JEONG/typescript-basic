@@ -1,23 +1,14 @@
-let greet: Function;
+type StringOrNum = string | number;
+type objWithName = { name: string; uid: StringOrNum };
 
-// greet = "Hello";
-
-greet = () => {
-  console.log("hello world");
+const logDetails = (uid: StringOrNum, item: string) => {
+  console.log(`${item} has a uid of ${uid}`);
 };
 
-//default paramter와 ?은 같이 쓸 수 없음
-const add = (a: number, b: number, c: number | string = 10): void => {
-  console.log(a + b);
-  console.log(c);
+const greet = (user: { name: string; uid: StringOrNum }) => {
+  console.log(`${user.name} says hello`);
 };
 
-add(1, 2);
-
-const minus = (a: number, b: number): number => {
-  return a + b;
+const greetAgain = (user: objWithName) => {
+  console.log(`${user.name} says hello`);
 };
-
-let result = minus(2, 7);
-
-// result = "some";
