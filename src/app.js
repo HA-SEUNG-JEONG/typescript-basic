@@ -1,4 +1,3 @@
-"use strict";
 //class
 var Invoice = /** @class */ (function () {
     function Invoice(c, d, a) {
