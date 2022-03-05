@@ -1,5 +1,7 @@
+import { HasFormatter } from "../interfaces/HasFormatter.js";
+
 //class
-export class Invoice {
+export class Invoice implements HasFormatter {
   //   readonly client: string;
   //   private details: string; //private은 클래스 외부에서는 접근 불가능
   //   public amount: number;
