@@ -1,16 +1,44 @@
-import { Invoice } from "./classes/Invoice.js";
+//interfaces
+interface IsPerson {
+  name: string;
+  age: number;
+  speak(a: string): void;
+  spend(a: number): number;
+}
 
-const invOne = new Invoice("mario", "work on  the mario website", 250);
-const invTwo = new Invoice("luigi", "work on  the luigi website", 300);
+const me: IsPerson = {
+  name: "shaun",
+  age: 30,
+  speak(text: string): void {
+    console.log(text);
+  },
+  spend(amount: number): number {
+    console.log("I spent", amount);
+    return amount;
+  },
+};
 
-let invoices: Invoice[] = [];
-invoices.push(invOne);
-invoices.push(invTwo);
+const greetPerson = (person: IsPerson) => {
+  console.log("hello", person.age);
+};
 
-invoices.forEach((inv) => {
-  //   inv.client = "something"; //readonly : 다른 값으로 할당 불가능
-  console.log(inv.client, inv.amount, inv.format());
-});
+greetPerson(me);
+
+console.log(me);
+
+// import { Invoice } from "./classes/Invoice.js";
+
+// const invOne = new Invoice("mario", "work on  the mario website", 250);
+// const invTwo = new Invoice("luigi", "work on  the luigi website", 300);
+
+// let invoices: Invoice[] = [];
+// invoices.push(invOne);
+// invoices.push(invTwo);
+
+// invoices.forEach((inv) => {
+//   //   inv.client = "something"; //readonly : 다른 값으로 할당 불가능
+//   console.log(inv.client, inv.amount, inv.format());
+// });
 
 //as를 이용한 type casting
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
